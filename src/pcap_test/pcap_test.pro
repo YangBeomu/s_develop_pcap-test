@@ -2,6 +2,14 @@ QT = core
 LIBS += -lpcap
 CONFIG += c++17 cmdline
 
+OBJECTS_DIR = ../../output/
+MOC_DIR = ../../output/
+CONFIG(debug, debug|release) {
+	DESTDIR = ../../build/debug
+        }else {
+        DESTDIR = ../../build/release
+}
+
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
